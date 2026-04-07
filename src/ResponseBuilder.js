@@ -9,6 +9,10 @@ class ResponseBuilder {
         return ResponseBuilder.build(HttpStatus.OK, message, data);
     }
 
+     static ok(status=HttpStatus.ok,message = "Success", data = null) {
+        return ResponseBuilder.build(status, message, data);
+    }
+
     static created(message = "Created", data = null) {
         return ResponseBuilder.build(HttpStatus.CREATED, message, data);
     }
