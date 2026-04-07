@@ -40,7 +40,7 @@ function validateSchema(body, schema = {}) {
             });
         }
 
-        if (rules.min && value.length < rules.min) {
+        if (rules.min && value && value.length < rules.min) {
             errors.push({
                 field,
                 message: `${field} must be at least ${rules.min}`

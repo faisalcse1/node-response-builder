@@ -6,11 +6,11 @@ class ResponseBuilder {
 
     // ✅ Success
     static ok(message = "Success", data = null) {
-        return this.build(HttpStatus.OK, message, data);
+        return ResponseBuilder.build(HttpStatus.OK, message, data);
     }
 
     static created(message = "Created", data = null) {
-        return this.build(HttpStatus.CREATED, message, data);
+        return ResponseBuilder.build(HttpStatus.CREATED, message, data);
     }
 
     // ❌ Error
@@ -26,11 +26,11 @@ class ResponseBuilder {
     }
 
     static badRequest(message = "Bad Request", errors = null) {
-        return this.error(message, HttpStatus.BAD_REQUEST, errors);
+        return ResponseBuilder.error(message, HttpStatus.BAD_REQUEST, errors);
     }
 
     static notFound(message = "Not Found") {
-        return this.error(message, HttpStatus.NOT_FOUND);
+        return ResponseBuilder.error(message, HttpStatus.NOT_FOUND);
     }
 
     static validation(errors = [], message = "Validation failed") {
@@ -54,14 +54,13 @@ class ResponseBuilder {
         };
     }
 
-    // 🔧 Core builder
     static build(status, message, data) {
         const response = new ApiResponse();
         response.status = status;
         response.success = status >= 200 && status < 300;
         response.message = message;
 
-        if (this.isPaginated(data)) {
+        if (ResponseBuilder.isPaginated(data)) {
             response.data = data.items || [];
             response.meta = new Meta(
                 data.total || 0,
@@ -76,7 +75,6 @@ class ResponseBuilder {
         return response;
     }
 
-    // Detect pagination
     static isPaginated(data) {
         return data &&
             typeof data === "object" &&
@@ -86,7 +84,7 @@ class ResponseBuilder {
     // Express helper
     static send(res, status, message, data) {
         return res.status(status).json(
-            this.build(status, message, data)
+            ResponseBuilder.build(status, message, data)
         );
     }
 }

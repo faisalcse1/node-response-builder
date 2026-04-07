@@ -1,7 +1,7 @@
 class Meta {
     constructor(totalRecords, totalPages, page, limit) {
-        this.total_records = totalRecords;
-        this.total_page = totalPages;
+        this.totalRecords = totalRecords;
+        this.totalPages = totalPages;
         this.page = page;
         this.limit = limit;
     }

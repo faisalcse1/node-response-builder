@@ -10,12 +10,20 @@
     "type": "git",
     "url": "git+https://github.com/faisalcse1/node-response-builder.git"
   },
-  "keywords": ["responsebuilder", "api-response", "express", "pagination"],
+  "keywords": [
+    "responsebuilder",
+    "api-response",
+    "express",
+    "pagination"
+  ],
   "author": "MD FAISAL",
   "license": "MIT",
   "type": "commonjs",
   "bugs": {
     "url": "https://github.com/faisalcse1/node-response-builder/issues"
   },
-  "homepage": "https://github.com/faisalcse1/node-response-builder#readme"
+  "homepage": "https://github.com/faisalcse1/node-response-builder#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
 }
