@@ -1,6 +1,6 @@
 {
-  "name": "response-builder",
-  "version": "1.0.0",
+  "name": "api-response-builder",
+  "version": "1.0.2",
   "description": "responsebuilder is a lightweight and flexible Node.js package designed to standardize API responses across applications. It provides a consistent response format with built-in support for HTTP status handling, validation, and pagination. This package helps developers maintain clean and predictable API responses by eliminating repetitive code and enforcing a unified response structure across all endpoints.",
   "main": "index.js",
   "scripts": {
@@ -11,6 +11,7 @@
     "url": "git+https://github.com/faisalcse1/node-response-builder.git"
   },
   "keywords": [
+    "api-response-builder",
     "responsebuilder",
     "api-response",
     "express",
@@ -25,5 +26,6 @@
   "homepage": "https://github.com/faisalcse1/node-response-builder#readme",
   "dependencies": {
     "express": "^5.2.1"
-  }
+  },
+  "devDependencies": {}
 }

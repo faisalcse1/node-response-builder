@@ -4,13 +4,10 @@ const HttpStatus = require("./HttpStatus");
 
 class ResponseBuilder {
 
-    // ✅ Success
-    static ok(message = "Success", data = null) {
-        return ResponseBuilder.build(HttpStatus.OK, message, data);
-    }
-
-     static ok(status=HttpStatus.ok,message = "Success", data = null) {
-        return ResponseBuilder.build(status, message, data);
+    // ✅ Success   
+     static ok(res,message = "Success", data = null) {
+        const status=HttpStatus.OK;
+        return res.status(status).json(ResponseBuilder.build(status, message, data));
     }
 
     static created(message = "Created", data = null) {
