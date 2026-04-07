@@ -45,7 +45,7 @@ class ResponseBuilder {
     }
 
     // 🔥 Pagination Helper (IMPORTANT)
-    static paginate({ items, total, page = 1, limit = 10 }) {
+    static paginate(items, total, page = 1, limit = 10) {
         return {
             items,
             total,

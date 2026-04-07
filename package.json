@@ -1,6 +1,6 @@
 {
   "name": "api-response-builder",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "responsebuilder is a lightweight and flexible Node.js package designed to standardize API responses across applications. It provides a consistent response format with built-in support for HTTP status handling, validation, and pagination. This package helps developers maintain clean and predictable API responses by eliminating repetitive code and enforcing a unified response structure across all endpoints.",
   "main": "index.js",
   "scripts": {
